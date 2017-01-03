@@ -43,7 +43,7 @@ Extend class `ActionModeCallback` and implement `onActionItemClicked`.
 ######Step 2:
 Very important to call `mode.finish()` at the end of each ActionItemClicked.
 ######Step 3:
-If you are adding a delete button please follow the following method to remove items from ArrayList:
+If you are adding a delete button please follow this method to remove items from ArrayList:
 
 ```
 class MultiSelect extends BRecyclerView.ActionModeCallback {
