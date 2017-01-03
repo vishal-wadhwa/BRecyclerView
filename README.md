@@ -120,4 +120,4 @@ Easy af. Add `app:dividerColor"` and `app:dividerHeight` attribute and done.
         android:layout_height="wrap_content"/>
   ```
   
-You can always look into this app for reference.
+You can always look into the sample app for reference.
