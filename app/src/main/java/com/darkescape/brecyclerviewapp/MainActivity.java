@@ -1,6 +1,7 @@
 package com.darkescape.brecyclerviewapp;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -68,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view= getLayoutInflater().inflate(R.layout.card_view,parent,false);
             ViewHolder holder=new ViewHolder(view);
-            holder.setTouchEffect(Color.GRAY,Color.WHITE);
+            holder.setTouchEffect(Color.LTGRAY,Color.WHITE);
             //holder.setBackground(new ColorDrawable(Color.WHITE)); //--> Custom Background
-            //holder.setCheckedBackground(new ColorDrawable(Color.GREEN)); //--> background when card_view is selected in multi select
+            //holder.setCheckedBackground(new ColorDrawable(Color.GRAY)); //--> background when card_view is selected in multi select
             triggerActionMode(holder);
             return holder;
         }
