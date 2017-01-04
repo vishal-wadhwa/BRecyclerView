@@ -66,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view= getLayoutInflater().inflate(R.layout.item,parent,false);
+            View view= getLayoutInflater().inflate(R.layout.card_view,parent,false);
             ViewHolder holder=new ViewHolder(view);
             holder.setTouchEffect(Color.GRAY,Color.WHITE);
             //holder.setBackground(new ColorDrawable(Color.WHITE)); //--> Custom Background
-            //holder.setCheckedBackground(new ColorDrawable(Color.GREEN)); //--> background when item is selected in multi select
+            //holder.setCheckedBackground(new ColorDrawable(Color.GREEN)); //--> background when card_view is selected in multi select
             triggerActionMode(holder);
             return holder;
         }
