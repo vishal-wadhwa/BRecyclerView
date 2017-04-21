@@ -27,6 +27,8 @@ In order to tackle this situation I made this library. It offers the following f
 <li>Color</li>
 </ul>
 </p>
+
+
 PS: Since, this is my first library, I cannot assure that it'll offer ultimate efficiency and performance but it is still worth a try. Report bugs, if any. :) 
 
 To include this library into you project add this dependency to app build.gradle:
@@ -47,8 +49,13 @@ To include this library into you project add this dependency to app build.gradle
 <img src="https://raw.githubusercontent.com/dark-escape/BRecyclerView/master/text_view_ex.gif" width="350"/>
 <img src="https://raw.githubusercontent.com/dark-escape/BRecyclerView/master/card_view_ex.gif" width="350"/>
 </p>
-## Usage  
-It is very simple to use this library, you can use it the same way you use RecyclerView, just that your adapter must extend `BRecyclerView.Adapter`, your ViewHolder must extend `BRecyclerView.ViewHolder` and if you want to use ContextualActionMode, create another class that extends `BrecyclerView.ActionModeCallback` and send its instance in 2nd constructor of your `BRecyclerView.Adapter` (look down for reference):
+
+<h2>Usage</h2>
+
+
+It is very simple to use this library, you can use it the same way you use RecyclerView, just that your adapter must extend `BRecyclerView.Adapter`, your ViewHolder must extend `BRecyclerView.ViewHolder` and if you want to use ContextualActionMode, create another class that extends `BrecyclerView.ActionModeCallback` and send its instance in 2nd constructor of your `BRecyclerView.Adapter` (scroll down for reference):
+
+
 ##### 1. TouchEffect
 ```
 ViewHolder holder=new ViewHolder(view);
@@ -120,13 +127,13 @@ public MyAdapter(Context context, @NonNull BRecyclerView.ActionModeCallback mode
 ###### Step 5:
 Do not forget to call `triggerActionMode(holder)` just before return in `onCreateViewHolder`.
 ###### Step 6:
-If you do not want your ActionMode Toolbar to look shitty add `<item name="actionModeBackground">@color/your_color</item>` to your activity theme at values/styles.xml
+If you do not want your ActionMode Toolbar to look shitty add the following to your activity theme at values/styles.xml:
+`<item name="actionModeBackground">@color/your_color</item>`
 
 ##### 3. Swipe to remove
 Use this:
 `swipeToRemove(boolean,BRecyclerView);`
-Next step is to update the list, that is to remove the item at that position and for this override `positionRemovedOnSwipe` and
-remove that item from your ArrayList, e.g. `name.remove(pos);`
+Next step is to update the list, that is to remove the item at that position and for this override `positionRemovedOnSwipe` and remove that item from your ArrayList, e.g. `name.remove(pos);`
 
 > Althought, swipe to remove is configured to adjust itself in conjunction with Multi-Select and Action but still it is **NOT** recommended to use them together.
 
