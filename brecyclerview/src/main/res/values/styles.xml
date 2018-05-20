@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="BRecyclerView">
+        <attr name="dividerHeight" format="dimension"/>
+        <attr name="dividerColor" format="color"/>
+    </declare-styleable>
+</resources>
